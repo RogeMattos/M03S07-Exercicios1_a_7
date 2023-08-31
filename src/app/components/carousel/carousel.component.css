@@ -1,0 +1,10 @@
+
+.carousel{
+    max-width: 500px;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 10px;
+}
+#carouselExampleIndicators{
+    background-color: cornflowerblue;
+}
