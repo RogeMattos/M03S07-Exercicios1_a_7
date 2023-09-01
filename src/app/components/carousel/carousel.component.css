@@ -1,10 +1,18 @@
 
 .carousel{
-    max-width: 500px;
+    max-width: 800px;
+    height: 500px;
     margin: auto;
     margin-top: auto;
     border-radius: 10px;
 }
 #carouselExampleIndicators{
-    background-color: cornflowerblue;
+    background-color: rgb(173, 162, 162);
 }
+ img{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 175px;
+    
+} 
+
