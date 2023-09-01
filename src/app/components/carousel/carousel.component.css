@@ -12,7 +12,12 @@
  img{
     max-width: 600px;
     margin: auto;
-    margin-top: 175px;
-    
-} 
+    margin-top: 175px;   
+}
+.custom-input{
+    border-color: black;
+}
+
+
+
 
