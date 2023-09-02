@@ -5,7 +5,11 @@
     height: 500px;
     margin: auto;
     margin-top: auto;
-    border-radius: 10px;
+    border-radius: 100px;
+    border-color: rgb(59, 30, 141);
+    border-style: solid;
+    border-width: 10px;
+
 }
 #carouselExampleIndicators{
     background-color: rgb(114, 109, 109);
