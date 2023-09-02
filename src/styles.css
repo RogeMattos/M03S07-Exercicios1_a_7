@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    /* background-color: dimgray; */
-    background-image: url("./assets/fidelizacao-alunos-artigos-cptjpg.jpeg");
     
+    position: static;
+    
+}
+
+body::before {
+    content: ""; /* Conteúdo vazio é necessário para pseudo-elementos */
+    background-image: url("./assets/fidelizacao-alunos-artigos-cptjpg.jpeg");
+    opacity: 0.7; /* Ajuste a opacidade da imagem de fundo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloque o pseudo-elemento atrás do conteúdo principal */
 }

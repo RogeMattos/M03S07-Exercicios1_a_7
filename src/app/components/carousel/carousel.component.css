@@ -1,4 +1,5 @@
 
+
 .carousel{
     max-width: 800px;
     height: 500px;
@@ -7,7 +8,7 @@
     border-radius: 10px;
 }
 #carouselExampleIndicators{
-    background-color: rgb(173, 162, 162);
+    background-color: rgb(114, 109, 109);
 }
  img{
     max-width: 600px;
@@ -16,6 +17,12 @@
 }
 .custom-input{
     border-color: black;
+}
+h5{
+    margin: auto;
+}
+.btn{
+    margin: auto;
 }
 
 
