@@ -1,4 +1,28 @@
 
 .nav {
     margin: auto;
+    font-size: x-large;
+    font-style: oblique;
 }
+.nav-link{
+    color: aliceblue;
+    background-color: rgb(59, 30, 141);
+    margin-right: 8px;
+    border-radius: 50px;
+    border: 2px solid aliceblue;    
+}
+img{
+    background-color: rgb(59, 30, 141);
+    border-radius: 30px;
+    margin-left: 20px;
+    border-color: aliceblue;
+    border-style: solid;
+}
+.nav-link:hover{
+    color:chocolate;
+}
+.d-flex{
+    background-color: rgb(77, 77, 174);
+    border-radius: 50px; 
+}
+     
