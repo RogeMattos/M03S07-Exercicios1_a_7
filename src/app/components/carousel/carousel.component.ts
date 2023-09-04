@@ -29,6 +29,13 @@ export class CarouselComponent {
       // você pode executar a lógica de envio do formulário aqui
       alert('Formulário enviado com sucesso!');
     }
+
+     // Apague os campos após o envio, atribuindo valores vazios
+     this.el.nativeElement.querySelector('#InputNome').value = '';
+     this.el.nativeElement.querySelector('#InputEmail').value = '';
+     this.el.nativeElement.querySelector('#InputDataNascimento').value = '';
+     this.el.nativeElement.querySelector('#FormControlTextarea').value = '';
+     this.el.nativeElement.querySelector('#InputNota').value = '';
   }
 
   validarEmail(email: string): boolean {
