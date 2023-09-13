@@ -19,18 +19,10 @@
           <label for="dtNascimento" class="form-label">Data de nascimento</label>
           <input type="date" class="form-control" id="dataNascimento" [placeholder]="'DD/MM/YYYY'">
         </div>
-        <div class="mb-3">
-          <label for="feedback" class="form-label">Feedback</label>
-          <textarea class="form-control" id="feedback"></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="nota" class="form-label">Nota</label>
-          <input type="number" class="form-control" id="nota" [min]="0" [max]="10">
-        </div>
       </form>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" (click)="fechar()">Fechar</button>
-      <button type="button" class="btn btn-primary" (click)="enviar()">Enviar</button>
+      <button type="button" class="btn btn-primary" (click)="enviar()" (click)="fechar()" >Enviar</button>
     </div>
   </div>
