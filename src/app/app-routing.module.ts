@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PaginaInicialComponent } from './pages/pagina-inicial/pagina-inicial.component';
+import { ModalFormComponent } from './components/modal-form/modal-form.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+{
+  path: '',
+  component: PaginaInicialComponent,
+
+}
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule ]
 })
 export class AppRoutingModule { }

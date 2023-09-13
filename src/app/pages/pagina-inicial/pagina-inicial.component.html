@@ -1,1 +1,7 @@
-<p>pagina-inicial works!</p>
+<app-header></app-header>
+
+<app-carousel (openModalFormulario)="openModalFormularioPagInicial()"></app-carousel>
+
+<ng-template #modalFormulario>
+  <app-modal-form>(closeModal)="closeModalPagInicial()"></app-modal-form> 
+</ng-template>

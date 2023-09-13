@@ -1,4 +1,5 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-carousel',
@@ -7,41 +8,12 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
 })
 export class CarouselComponent {
   
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  @Output() openModalFormulario: EventEmitter<any> = new EventEmitter();
 
-  enviarFormulario() {
-    // Obtenha os valores dos campos de entrada
-    const nome = this.el.nativeElement.querySelector('#InputNome').value;
-    const email = this.el.nativeElement.querySelector('#InputEmail').value;
-    const dataNascimento = this.el.nativeElement.querySelector('#InputDataNascimento').value;
-    const feedback = this.el.nativeElement.querySelector('#FormControlTextarea').value;
-    const nota = this.el.nativeElement.querySelector('#InputNota').value;
+  constructor() {}
 
-    // Verifique se algum campo está vazio
-    if (!nome || !email || !dataNascimento || !feedback || !nota) {
-      // Exiba um alerta se algum campo estiver vazio
-      alert('Por favor, preencha todos os campos.');
-    } else if (!this.validarEmail(email)) { // Note o uso do operador de negação (!) aqui
-      // Verifique se o email é válido
-      alert('Por favor, insira um endereço de email válido.');
-    } else {
-      // Se todos os campos estiverem preenchidos e o email for válido,
-      // você pode executar a lógica de envio do formulário aqui
-      alert('Formulário enviado com sucesso!');
-    }
-
-     // Apague os campos após o envio, atribuindo valores vazios
-     this.el.nativeElement.querySelector('#InputNome').value = '';
-     this.el.nativeElement.querySelector('#InputEmail').value = '';
-     this.el.nativeElement.querySelector('#InputDataNascimento').value = '';
-     this.el.nativeElement.querySelector('#FormControlTextarea').value = '';
-     this.el.nativeElement.querySelector('#InputNota').value = '';
-  }
-
-  validarEmail(email: string): boolean {
-    // Expressão regular para validar um email 
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+  openModal() {
+    this.openModalFormulario.emit();
   }
 }
 

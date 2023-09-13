@@ -8,6 +8,11 @@ import { PaginaInicialComponent } from './pages/pagina-inicial/pagina-inicial.co
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ModalFormComponent } from './components/modal-form/modal-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    BrowserAnimationsModule,
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+   
+
+  ],
+  exports:[
+    ModalFormComponent,
+    CarouselComponent,
+    PaginaInicialComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]
