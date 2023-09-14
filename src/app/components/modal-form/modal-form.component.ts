@@ -12,6 +12,7 @@ export class ModalFormComponent implements OnInit {
   @Output() closeModal: EventEmitter<any> = new EventEmitter();
 
   usuarioForm!: FormGroup;
+  
 
   constructor(private activeModal: NgbActiveModal, private http: HttpClient) {}
 
@@ -31,18 +32,20 @@ export class ModalFormComponent implements OnInit {
     //Console.log(this.usuarioForm.value)--testa se o objeto está sendo montado corretamente--
 
     //url do endpoint a ser chamado
-    const url = '';
+    const url = 'https://localhost:7267/api/Ficha';
 
      //construção do objeto para envio
     
     const body = {
-      nomeUsuario: this.usuarioForm.value.nome,
-      email: this.usuarioForm.value.email,
-      dataNascimento: this.usuarioForm.value.dataNascimento
+      nomeCompleto: this.usuarioForm.value.nome,
+      emailInformado: this.usuarioForm.value.email,
+      dataDeNascimento: this.usuarioForm.value.dataNascimento
     }
     this.http.post(url, body).subscribe(retorno => {
       //rotina
-      console.log(retorno);
+     
+     console.log(retorno);
+      
     })
   }
   fecharModal() {

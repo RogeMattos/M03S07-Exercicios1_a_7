@@ -32,6 +32,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     CommonModule,
    
+   
 
   ],
   exports:[
