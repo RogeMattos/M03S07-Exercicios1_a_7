@@ -43,7 +43,12 @@ export class ModalFormComponent implements OnInit {
     }
     this.http.post(url, body).subscribe(retorno => {
       //rotina
-     
+      if (retorno) {
+        // Cadastro bem-sucedido, faça alguma ação no frontend
+       alert('Cadastro realizado com sucesso');
+      } else {
+        alert('Erro ao cadastrar');
+      }
      console.log(retorno);
       
     })
